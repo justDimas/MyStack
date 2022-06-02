@@ -7,8 +7,9 @@ public class Main {
         System.out.println(arr.get(2));
         System.out.println(arr.size());
         System.out.println(arr.toString());
+        arr.set(1, "qwe");
+        System.out.println(arr.toString());
         //arr.remove(2);
-        //arr.set(1, "qwe");
 
 
 

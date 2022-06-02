@@ -28,9 +28,20 @@ public class MyStack <T> {
         for(int i = 0; i<index; i++){
             iterator = iterator.next;
         }
-        return iterator.value;
+        return iterator.getV();
     }
 
+    boolean set(int index, T obj){
+        if(index >= size || index < 0){
+            return false;
+        }
+        iterator = first;
+        for (int i = 0; i < index; i++) {
+            iterator = iterator.next;
+        }
+        iterator.setV(obj);
+        return true;
+    }
 
     @Override
     public String toString() {
@@ -40,10 +51,10 @@ public class MyStack <T> {
         StringBuilder str = new StringBuilder();
         iterator = first;
         while(iterator.next!=null){
-            str.append("{" + iterator.value.toString()+ "}");
+            str.append("{" + iterator.getV().toString()+ "}");
             iterator = iterator.next;
         }
-        str.append("{" + iterator.value.toString()+ "}");
+        str.append("{" + iterator.getV().toString()+ "}");
         return str.toString();
     }
 }
