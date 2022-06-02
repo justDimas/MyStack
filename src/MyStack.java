@@ -31,4 +31,19 @@ public class MyStack <T> {
         return iterator.value;
     }
 
+
+    @Override
+    public String toString() {
+        if(first == null){
+            return "Stack is empty";
+        }
+        StringBuilder str = new StringBuilder();
+        iterator = first;
+        while(iterator.next!=null){
+            str.append("{" + iterator.value.toString()+ "}");
+            iterator = iterator.next;
+        }
+        str.append("{" + iterator.value.toString()+ "}");
+        return str.toString();
+    }
 }

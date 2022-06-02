@@ -6,9 +6,11 @@ public class Main {
         arr.add("zxcvzx");
         System.out.println(arr.get(2));
         System.out.println(arr.size());
-        //System.out.println(arr.toString());
+        System.out.println(arr.toString());
         //arr.remove(2);
         //arr.set(1, "qwe");
+
+
 
     }
 }
